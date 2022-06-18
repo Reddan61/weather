@@ -1,0 +1,43 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    &__title {
+        font-weight: 600;
+        font-size: 26px;
+        white-space: nowrap;
+        padding: 0 0 10px;
+    }
+}
+.item {
+    display: flex;
+    margin: 10px 0 0;
+    &:first-child {
+        margin: 0;
+    }
+    &__header {
+        display: flex;
+        justify-content: center;
+    }
+    &__date {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 0 0 0 20px;
+    }
+    &__temp {
+        font-size: 18px;
+    }
+    &__icon {
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -1,0 +1,33 @@
+.app {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    &__container {
+        width: 100%;
+        max-width: 1200px;
+    }
+    &__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        row-gap: 15px;
+        column-gap: 20px;
+    }
+    &__today {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    &__forecast {
+
+    }
+    &__chart {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
