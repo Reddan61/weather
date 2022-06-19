@@ -4,7 +4,10 @@
             Прогноз
         </div>
         <div class="list__items">
-            <div v-for="item in listForecast" v-bind:key = "item.date" class = "item">
+            <div class="list__noData" v-if = "!listForecast">
+                No Data
+            </div>
+            <div v-else v-for="item in listForecast" v-bind:key = "item.date" class = "item">
                 <span class = "item__date">{{ getDayWeek(item.date) }}</span>
     
                 <div class = "item__info">

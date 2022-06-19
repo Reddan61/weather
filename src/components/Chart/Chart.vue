@@ -1,7 +1,10 @@
 <template>
     <div class="chart">
         <div class="chart__title">История</div>
-        <Line 
+        <div class="chart__noData" v-if = "!historyChartData || !historyChartData.labels || !historyChartData.data">
+            No Data
+        </div>
+        <Line v-else 
             :chart-data="getChartData" 
             :chart-options="{ 
                 responsive:true,

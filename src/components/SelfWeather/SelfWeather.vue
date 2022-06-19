@@ -1,5 +1,6 @@
 <template>
     <div class="selfWeather">
+     
         <div class="selfWeather__header">
             <span class="selfWeather__city">
                 Погода в Ростове-на-Дону
@@ -8,7 +9,10 @@
                 сегодня {{ getDayWeek().toLowerCase() }}
             </span>
         </div>
-        <div class = "selfWeather__info">
+        <div class="selfWeather__noData" v-if = "!currentWeather || !currentWeather.weather[0] || !currentWeather.main">
+            No Data
+        </div>
+        <div v-else class = "selfWeather__info">
             <img :src = "getImgSrcIcon(this.currentWeather.weather[0].icon)" class = "selfWeather__icon"/>
             <span class="selfWeather__temp"> {{ 
                this.currentWeather.main.temp.toFixed(0)

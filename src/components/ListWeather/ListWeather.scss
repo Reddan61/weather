@@ -19,6 +19,12 @@
             flex-direction: row;
         }
     }
+
+    &__noData {
+        margin: 10px 0 0;
+        font-size: 18px;
+        color:red;
+    }
 }
 .item {
     display: flex;
@@ -34,6 +40,12 @@
         &:first-child {
             padding: 0 15px 0 0;
         }
+    }
+    @media (max-width:300px) {
+        &:first-child {
+            padding: 0 5px 0 0;
+        }
+        padding: 0 5px 0;
     }
     &__header {
         display: flex;
@@ -67,3 +79,4 @@
         height: 30px;
     }
 }
+

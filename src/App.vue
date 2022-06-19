@@ -1,8 +1,8 @@
 <template>
     <div class="app">
         <div class="app__container">
-            <div v-if = "isLoading">
-                is loading....
+            <div v-if = "isLoading" class="app__loader">
+                <Loader />
             </div>
             <div class = "app__body" v-else>
                 <SelfWeather class = "app__today"/>
@@ -17,13 +17,14 @@
 import SelfWeather from "./components/SelfWeather/SelfWeather.vue"
 import ListWeather from "./components/ListWeather/ListWeather.vue"
 import Chart from "./components/Chart/Chart.vue"
+import Loader from "./components/Loader/Loader.vue"
 
 
 export default {
     components: {
         SelfWeather,
         ListWeather,
-        Chart
+        Chart, Loader
     },
     methods: {
         async getDataWeather() {

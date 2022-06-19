@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from "axios"
+import axios from "axios"
 import { getDateFormat } from "@/Utils/getDateFormat"
 
 const config = {
@@ -28,7 +28,10 @@ export class API {
                 data
             }
         } catch(e) {
-            console.log(e)
+            return {
+                message:"error",
+                data:e.response.data
+            }
         }
     }
     static async getForeCastWeatherData() {
@@ -48,7 +51,10 @@ export class API {
                 data
             }
         } catch(e) {
-            console.log(e)
+            return {
+                message:"error",
+                data:e.response.data
+            }
         }
     }
     static async getHistoryWeather() {
@@ -83,7 +89,10 @@ export class API {
                 data:response.data
             }
         } catch(e) {
-            console.log(e)
+            return {
+                message:"error",
+                data:e.response.data
+            }
         }
     }
 }

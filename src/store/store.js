@@ -25,10 +25,16 @@ export const store = createStore({
     actions: {
         async getCurrentWeather({ commit }) {
             const currentWeather = await API.getCurrentWeatherData()
+
+            if(currentWeather.message !== "success") 
+                return
             commit("setCurrentWeather",currentWeather.data)
         },
         async getForeCast({ commit }) {
             const forecast = await API.getForeCastWeatherData()
+
+            if(forecast.message !== "success") 
+                return
 
             const list = forecast.data.list
 
@@ -67,12 +73,15 @@ export const store = createStore({
                 })
 
             }
-
+            
             commit("setForecast",newList.slice(1,4))
         },
         async getHistory({ commit }) {
             const history = await API.getHistoryWeather()
 
+            if(history.message !== "success") 
+                return
+            
             const historyDays = history.data.days
             const newHistoryChartData = {
                 labels: [],
@@ -85,7 +94,6 @@ export const store = createStore({
                 newHistoryChartData.labels.push(getDayWeek(date))
                 newHistoryChartData.data.push(historyDays[i].temp.toFixed(1))
             }
-
 
             commit("setHistoryChartData",newHistoryChartData)
         },
