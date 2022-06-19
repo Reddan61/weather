@@ -3,7 +3,7 @@ import { getDateFormat } from "@/Utils/getDateFormat"
 
 const config = {
     apiKeyOpenWeatherMap: "a78ecbc66effb34f9206dba343b2e0ed",
-    apiKeyVisualcrossing:"KTPDQB23MWGY9QG55T3PXMDWM",
+    apiKeyVisualcrossing:"K3BPFPWWXFYEYBE2VJ884RMRJ",
     latitude: 47.226724,
     longitude: 39.698338,
 }
