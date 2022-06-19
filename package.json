@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "npx webpack serve --config ./config/webpack.config.dev.js"
+    "dev": "npx webpack serve --config ./config/webpack.config.dev.js",
+    "prod": "npx webpack --config ./config/webpack.config.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
     "postcss-loader": "^7.0.0",
     "sass": "^1.52.3",
     "sass-loader": "^13.0.0",
