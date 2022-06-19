@@ -61,7 +61,7 @@ export const store = createStore({
                 const averageSum = sum / tempsArr[i].length
 
                 newList.push({
-                    averageTemp: averageSum,
+                    temp: averageSum,
                     icon: weatherList[i][Math.floor(weatherList[i].length / 2)],
                     date: list[daysPortals[i]].dt_txt
                 })
@@ -83,7 +83,7 @@ export const store = createStore({
                 const date = new Date(historyDays[i].datetime)
 
                 newHistoryChartData.labels.push(getDayWeek(date))
-                newHistoryChartData.data.push(historyDays[i].temp)
+                newHistoryChartData.data.push(historyDays[i].temp.toFixed(1))
             }
 
 

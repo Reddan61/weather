@@ -52,10 +52,8 @@ export default {
                 labels:this.historyChartData.labels,
                 datasets: [
                     {
-                        label: 'Последнии дни',
                         data: this.historyChartData.data,
-                        borderColor: "blue",
-                        backgroundColor: "white",
+                        backgroundColor: '#f87979',
                     }
                 ]
             }

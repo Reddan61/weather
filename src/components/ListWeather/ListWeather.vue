@@ -8,7 +8,7 @@
 
             <div class = "item__info">
                 <img class = "item__icon" :src = "getImgSrcIcon(item.icon)"/>
-                <span class="item__temp">{{ item.averageTemp.toFixed(0) }}&deg;</span>
+                <span class="item__temp">{{ item.temp.toFixed(0) }}&deg;</span>
             </div>
         </div>
     </div>

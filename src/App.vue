@@ -25,13 +25,19 @@ export default {
         ListWeather,
         Chart
     },
+    methods: {
+        async getDataWeather() {
+            await this.$store.dispatch({ type: "getWeatherData"})
+            setTimeout(this.getDataWeather, 60 * 1000)
+        }
+    },
     data() {
         return {
             isLoading:true
         }
     },
     async mounted() {
-        await this.$store.dispatch({ type: "getWeatherData"})
+        await this.getDataWeather()
         this.isLoading = false
     }
 }
