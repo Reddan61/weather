@@ -1,13 +1,23 @@
 .list {
     display: flex;
     flex-direction: column;
-    
     width: 100%;
+
     &__title {
         font-weight: 600;
         font-size: 26px;
         white-space: nowrap;
         padding: 0 0 10px;
+        @media (max-width:750px) {
+            font-size: 20px;
+        }
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 750px) {
+            flex-direction: row;
+        }
     }
 }
 .item {
@@ -15,6 +25,15 @@
     margin: 10px 0 0;
     &:first-child {
         margin: 0;
+    }
+    @media (max-width: 750px) {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0 15px;
+        &:first-child {
+            padding: 0 15px 0 0;
+        }
     }
     &__header {
         display: flex;
@@ -25,6 +44,9 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        @media (max-width: 750px) {
+            justify-content: center;
+        }
     }
     &__info {
         display: flex;
@@ -32,6 +54,10 @@
         justify-content: flex-end;
         width: 100%;
         padding: 0 0 0 20px;
+        @media (max-width: 750px) {
+            justify-content: center;
+            padding: 0;
+        }
     }
     &__temp {
         font-size: 18px;

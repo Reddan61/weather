@@ -2,9 +2,10 @@
     <div class="chart">
         <div class="chart__title">История</div>
         <Line 
-        :chart-data="getChartData" 
+            :chart-data="getChartData" 
             :chart-options="{ 
-                maintainAspectRatio: false,
+                responsive:true,
+                maintainAspectRatio: false,   
                 plugins: {
                     legend: {
                         display: false

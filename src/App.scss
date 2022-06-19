@@ -6,14 +6,19 @@
     &__container {
         width: 100%;
         max-width: 1200px;
+        padding: 0 15px;
     }
     &__body {
         width: 100%;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 5fr;
         grid-template-rows: auto auto;
         row-gap: 15px;
         column-gap: 20px;
+        @media (max-width: 750px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
     &__today {
         grid-column-start: 1;
@@ -29,5 +34,7 @@
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 3;
+        width: 100%;
+        max-width: 100%;
     }
 }
